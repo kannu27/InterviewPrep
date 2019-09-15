@@ -11,9 +11,9 @@ class MaxInBitonicArray {
       return arr[s];
     }
     int mid = ( s + e)/ 2;
-    if(arr[mid] > arr[mid -1] && arr[mid] > arr[mid+1]) return arr[mid]; //bitonic max
-    if(arr[mid] > arr[mid -1] && arr[mid] < arr[mid + 1]) return MaxInBitonicArray(arr, mid + 1, e);
-    return MaxInBitonicArray(arr, s, mid -1);
+    if(arr[mid] > arr[mid + 1]) return MaxInBitonicArray(arr, s, mid); //descending array
+    else return MaxInBitonicArray(arr, mid +1, e);
+
   }
 
   public static void main(String[] args) {
