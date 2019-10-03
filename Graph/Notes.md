@@ -20,7 +20,7 @@ Questions
 
 Topological sort
 https://algorithms.tutorialhorizon.com/topological-sort/
-Modified DFS:
+**Modified DFS:**
 
 Use temporary stack to store the vertex.
 Maintain a visited [] to keep track of already visited vertices.
@@ -28,3 +28,6 @@ In DFS we print the vertex and make recursive call to the adjacent vertices but 
 Observe closely the previous step, it will ensure that vertex will be pushed to stack only when all of its adjacent vertices (descendants) are pushed into stack.
 Finally print the stack.
 For disconnected graph, Iterate through all the vertices, during iteration, at a time consider each vertex as source (if not already visited).
+
+**Using Indegree**
+https://www.cs.usfca.edu/~galles/visualization/TopoSortIndegree.html
