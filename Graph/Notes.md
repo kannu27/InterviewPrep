@@ -18,14 +18,14 @@ Questions
 7. Dijiktras 
 
 Leetcode medium list - https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/
-Clone Graph
-Course Schedule
-Alien Dictionary
-Pacific Atlantic Water Flow
-Number of Islands
-Graph Valid Tree
-Number of Connected Components in an Undirected Graph
-Longest Consecutive Sequence
+1. Clone Graph 
+2. Course Schedule
+3. Alien Dictionary
+4. Pacific Atlantic Water Flow
+5. Number of Islands
+6. Graph Valid Tree
+7. Number of Connected Components in an Undirected Graph
+8. Longest Consecutive Sequence
 
 Tips for DFS on matrix
 https://leetcode.com/problems/pacific-atlantic-water-flow/discuss/90739/python-dfs-bests-85-tips-for-all-dfs-in-matrix-question
