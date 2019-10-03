@@ -17,6 +17,18 @@ Questions
 6. Topological Sort
 7. Dijiktras 
 
+Leetcode medium list - https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/
+Clone Graph
+Course Schedule
+Alien Dictionary
+Pacific Atlantic Water Flow
+Number of Islands
+Graph Valid Tree
+Number of Connected Components in an Undirected Graph
+Longest Consecutive Sequence
+
+Tips for DFS on matrix
+https://leetcode.com/problems/pacific-atlantic-water-flow/discuss/90739/python-dfs-bests-85-tips-for-all-dfs-in-matrix-question
 
 Topological sort
 https://algorithms.tutorialhorizon.com/topological-sort/
