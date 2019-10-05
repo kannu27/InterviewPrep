@@ -3,6 +3,8 @@
 //https://leetcode.com/problems/graph-valid-tree
 //https://leetcode.com/problems/graph-valid-tree/discuss/69018/AC-Java-Union-Find-solution  -MOST VOTED
 
+
+///ALgo1: Using DFS for detect cycle in undirected graph
 class GraphValidTree {
     public boolean validTree(int n, int[][] edges) {
         if(n < 2 ) return true;
@@ -33,5 +35,67 @@ class GraphValidTree {
         }
         
         return false;
+    }
+}
+
+
+//Algo2: Weight Quick Union and finding connected components in undirected Graph
+class Solution {
+    public boolean validTree(int n, int[][] edges) {
+        if(n < 2) return true;
+        UF uf = new UF(n);
+        for(int i = 0; i < edges.length; i++){
+            int x = edges[i][0];
+            int y = edges[i][1];
+            if(uf.connected(x,y)) return false;
+            uf.union(x,y);
+        }
+        return uf.segment == 1;
+    }
+    
+    private static class UF {
+        private int n;
+        private int[] id;
+        private int[] sz;
+        private int segment;
+        
+        public UF(int n){
+            this.n = n;
+            id = new int[n];
+            sz = new int[n];
+            segment = n;
+            for(int i =0; i < n; i++){
+                id[i]=i;
+                sz[i]=1;
+            }
+        }
+        
+        public int root(int x){
+            while(id[x] != x){
+                x = id[x];
+            }
+            return x;
+        }
+        
+        public boolean connected(int i, int j){
+            int x = root(i);
+            int y = root(j);
+            return x == y;
+        }
+        
+        public void union(int i, int j){
+            int x = root(i);
+            int y = root(j);
+            if(x == y) return;
+            if(sz[x] < sz[y]){
+                id[x] = y;
+                sz[y] += sz[x];
+            }else{
+                id[y] = x;
+                sz[x] += sz[y];
+            }
+            segment--;
+        }
+        
     }
 }
